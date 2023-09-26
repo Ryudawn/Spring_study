@@ -1,0 +1,138 @@
+[2023-08-15 10:07:29:410][background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.0.Final
+[2023-08-15 10:07:29:444][main] INFO  c.example.demo.Project09Application - Starting Project09Application using Java 17.0.7 with PID 79900 (D:\0.tool\spring-workspace\project09\bin\main started by imjiyeon in D:\0.tool\spring-workspace\project09)
+[2023-08-15 10:07:29:445][main] INFO  c.example.demo.Project09Application - No active profile set, falling back to 1 default profile: "default"
+[2023-08-15 10:07:29:919][main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2023-08-15 10:07:30:959][main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 34 ms. Found 1 JPA repository interfaces.
+[2023-08-15 10:07:30:1371][main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[2023-08-15 10:07:30:1390][main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[2023-08-15 10:07:30:1391][main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+[2023-08-15 10:07:30:1392][main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+[2023-08-15 10:07:30:1548][main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2023-08-15 10:07:30:1549][main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1068 ms
+[2023-08-15 10:07:30:1730][main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2023-08-15 10:07:30:1766][main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.7.Final
+[2023-08-15 10:07:30:1938][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2023-08-15 10:07:31:1999][main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@134abd78
+[2023-08-15 10:07:31:2000][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2023-08-15 10:07:31:2026][main] INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+[2023-08-15 10:07:31:2825][main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2023-08-15 10:07:31:2840][main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2023-08-15 10:07:32:3636][main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[2023-08-15 10:07:32:3654][main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[2023-08-15 10:07:32:3661][main] INFO  c.example.demo.Project09Application - Started Project09Application in 3.544 seconds (process running for 4.124)
+[2023-08-15 10:11:36:247087][RMI TCP Connection(13)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+[2023-08-15 10:11:36:247095][RMI TCP Connection(13)-127.0.0.1] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+[2023-08-15 10:11:36:247095][RMI TCP Connection(13)-127.0.0.1] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+[2023-08-15 10:11:36:247108][RMI TCP Connection(13)-127.0.0.1] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+[2023-08-15 10:11:36:247110][RMI TCP Connection(13)-127.0.0.1] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+[2023-08-15 10:11:36:247111][RMI TCP Connection(13)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[2023-08-15 10:11:36:247112][RMI TCP Connection(13)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2023-08-15 10:11:36:247115][RMI TCP Connection(13)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2023-08-15 10:12:42:355][main] INFO  c.example.demo.Project09Application - Starting Project09Application using Java 17.0.7 with PID 81776 (D:\0.tool\spring-workspace\project09\bin\main started by imjiyeon in D:\0.tool\spring-workspace\project09)
+[2023-08-15 10:12:42:356][main] INFO  c.example.demo.Project09Application - No active profile set, falling back to 1 default profile: "default"
+[2023-08-15 10:12:42:646][main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2023-08-15 10:12:42:681][main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 31 ms. Found 1 JPA repository interfaces.
+[2023-08-15 10:12:42:920][main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[2023-08-15 10:12:42:927][main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[2023-08-15 10:12:42:927][main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+[2023-08-15 10:12:42:927][main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+[2023-08-15 10:12:42:979][main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2023-08-15 10:12:42:979][main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 601 ms
+[2023-08-15 10:12:42:1056][main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2023-08-15 10:12:42:1082][main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.7.Final
+[2023-08-15 10:12:42:1249][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2023-08-15 10:12:42:1297][main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@506aa618
+[2023-08-15 10:12:42:1299][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2023-08-15 10:12:42:1320][main] INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+[2023-08-15 10:12:43:1748][main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2023-08-15 10:12:43:1754][main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2023-08-15 10:12:43:2050][main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[2023-08-15 10:12:43:2063][main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[2023-08-15 10:12:43:2068][main] INFO  c.example.demo.Project09Application - Started Project09Application in 1.989 seconds (process running for 2.391)
+[2023-08-15 10:24:54:732520][http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2023-08-15 10:24:54:732521][http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[2023-08-15 10:24:54:732524][http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+[2023-08-15 10:24:54:732712][http-nio-8080-exec-1] INFO  c.e.demo.controller.BoardController - 게시물을 등록합니다.
+[2023-08-15 10:25:05:743714][RMI TCP Connection(22)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+[2023-08-15 10:25:05:743724][RMI TCP Connection(22)-127.0.0.1] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+[2023-08-15 10:25:05:743724][RMI TCP Connection(22)-127.0.0.1] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+[2023-08-15 10:25:05:743725][RMI TCP Connection(22)-127.0.0.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+[2023-08-15 10:25:05:743727][RMI TCP Connection(22)-127.0.0.1] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+[2023-08-15 10:25:05:743729][RMI TCP Connection(22)-127.0.0.1] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+[2023-08-15 10:25:05:743730][RMI TCP Connection(22)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[2023-08-15 10:25:05:743731][RMI TCP Connection(22)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2023-08-15 10:25:05:743734][RMI TCP Connection(22)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2023-08-15 10:25:06:346][main] INFO  c.example.demo.Project09Application - Starting Project09Application using Java 17.0.7 with PID 83288 (D:\0.tool\spring-workspace\project09\bin\main started by imjiyeon in D:\0.tool\spring-workspace\project09)
+[2023-08-15 10:25:06:347][main] INFO  c.example.demo.Project09Application - No active profile set, falling back to 1 default profile: "default"
+[2023-08-15 10:25:06:650][main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2023-08-15 10:25:07:685][main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 30 ms. Found 1 JPA repository interfaces.
+[2023-08-15 10:25:07:942][main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[2023-08-15 10:25:07:948][main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[2023-08-15 10:25:07:948][main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+[2023-08-15 10:25:07:948][main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+[2023-08-15 10:25:07:1003][main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2023-08-15 10:25:07:1003][main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 633 ms
+[2023-08-15 10:25:07:1081][main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2023-08-15 10:25:07:1109][main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.7.Final
+[2023-08-15 10:25:07:1258][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2023-08-15 10:25:07:1302][main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@506aa618
+[2023-08-15 10:25:07:1304][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2023-08-15 10:25:07:1326][main] INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+[2023-08-15 10:25:08:1782][main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2023-08-15 10:25:08:1789][main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2023-08-15 10:25:08:2105][main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[2023-08-15 10:25:08:2120][main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[2023-08-15 10:25:08:2125][main] INFO  c.example.demo.Project09Application - Started Project09Application in 2.045 seconds (process running for 2.433)
+[2023-08-15 10:25:22:16650][http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2023-08-15 10:25:22:16651][http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[2023-08-15 10:25:22:16651][http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+[2023-08-15 10:25:23:16710][http-nio-8080-exec-1] INFO  c.e.demo.controller.BoardController - 게시물을 등록합니다.
+[2023-08-15 10:25:59:52861][RMI TCP Connection(10)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+[2023-08-15 10:25:59:52869][RMI TCP Connection(10)-127.0.0.1] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+[2023-08-15 10:25:59:52869][RMI TCP Connection(10)-127.0.0.1] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+[2023-08-15 10:25:59:52870][RMI TCP Connection(10)-127.0.0.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+[2023-08-15 10:25:59:52872][RMI TCP Connection(10)-127.0.0.1] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+[2023-08-15 10:25:59:52874][RMI TCP Connection(10)-127.0.0.1] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+[2023-08-15 10:25:59:52875][RMI TCP Connection(10)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[2023-08-15 10:25:59:52876][RMI TCP Connection(10)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2023-08-15 10:25:59:52879][RMI TCP Connection(10)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2023-08-15 10:26:00:342][main] INFO  c.example.demo.Project09Application - Starting Project09Application using Java 17.0.7 with PID 53284 (D:\0.tool\spring-workspace\project09\bin\main started by imjiyeon in D:\0.tool\spring-workspace\project09)
+[2023-08-15 10:26:00:344][main] INFO  c.example.demo.Project09Application - No active profile set, falling back to 1 default profile: "default"
+[2023-08-15 10:26:00:634][main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2023-08-15 10:26:00:667][main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 1 JPA repository interfaces.
+[2023-08-15 10:26:01:923][main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[2023-08-15 10:26:01:928][main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[2023-08-15 10:26:01:929][main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+[2023-08-15 10:26:01:929][main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+[2023-08-15 10:26:01:981][main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2023-08-15 10:26:01:982][main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 614 ms
+[2023-08-15 10:26:01:1063][main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2023-08-15 10:26:01:1089][main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.7.Final
+[2023-08-15 10:26:01:1243][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2023-08-15 10:26:01:1289][main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@4243341e
+[2023-08-15 10:26:01:1291][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2023-08-15 10:26:01:1313][main] INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+[2023-08-15 10:26:01:1736][main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2023-08-15 10:26:01:1743][main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2023-08-15 10:26:02:2092][main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[2023-08-15 10:26:02:2106][main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[2023-08-15 10:26:02:2112][main] INFO  c.example.demo.Project09Application - Started Project09Application in 2.04 seconds (process running for 2.421)
+[2023-08-15 10:26:03:3387][http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2023-08-15 10:26:03:3387][http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[2023-08-15 10:26:03:3388][http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+[2023-08-15 10:26:03:3453][http-nio-8080-exec-1] INFO  c.e.demo.controller.BoardController - 게시물을 등록합니다.
+[2023-08-15 10:27:51:111347][http-nio-8080-exec-4] INFO  c.e.demo.controller.BoardController - 게시물 목록을 조회합니다.
+[2023-08-15 10:28:00:120547][http-nio-8080-exec-6] INFO  c.e.demo.controller.BoardController - 게시물을 상세 조회합니다.
+[2023-08-15 10:28:15:135075][http-nio-8080-exec-7] INFO  c.e.demo.controller.BoardController - 게시물을 수정합니다.
+[2023-08-15 10:28:25:144972][http-nio-8080-exec-8] INFO  c.e.demo.controller.BoardController - 게시물을 상세 조회합니다.
+[2023-08-15 10:28:34:154700][http-nio-8080-exec-9] INFO  c.e.demo.controller.BoardController - 게시물을 삭제합니다.
+[2023-08-15 10:28:38:157969][http-nio-8080-exec-10] INFO  c.e.demo.controller.BoardController - 게시물 목록을 조회합니다.
+[2023-08-15 10:28:50:170629][RMI TCP Connection(13)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+[2023-08-15 10:28:50:170654][RMI TCP Connection(13)-127.0.0.1] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+[2023-08-15 10:28:50:170655][RMI TCP Connection(13)-127.0.0.1] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+[2023-08-15 10:28:50:170655][RMI TCP Connection(13)-127.0.0.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+[2023-08-15 10:28:50:170658][RMI TCP Connection(13)-127.0.0.1] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+[2023-08-15 10:28:50:170660][RMI TCP Connection(13)-127.0.0.1] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+[2023-08-15 10:28:50:170661][RMI TCP Connection(13)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[2023-08-15 10:28:50:170662][RMI TCP Connection(13)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2023-08-15 10:28:50:170665][RMI TCP Connection(13)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
