@@ -1,0 +1,16 @@
+<!-- 링크 표현식 -->
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>URL 링크</h1>
+    <ul>
+        <li><a th:href="@{/sample/ex3(param=aaa)}">3번째 페이지로 이동하기</a></li> <!-- () 부분이 쿼리 파라미터로 처리됨 -->
+        <li><a th:href="@{/sample/ex3(param=${msg})}">3번째 페이지로 이동하기</a></li> <!-- 변수를 파라미터로 사용 -->
+    </ul>
+</body>
+</html>
