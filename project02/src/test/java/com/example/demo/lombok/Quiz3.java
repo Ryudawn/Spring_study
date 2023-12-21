@@ -14,7 +14,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 public class Quiz3 {
 
-	@Test //단위테스트
+	@Test
 	void test() {		
 		Student student = new Student();
 		student.setStudentId(1001);
