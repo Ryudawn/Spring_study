@@ -11,8 +11,9 @@ import org.springframework.boot.test.context.SpringBootTest;
  * - 속성: 담당교사
  * 3.스프링컨테이너에 수업, 선생님 객체를 저장하세요
  * 4.단위테스트 클래스를 만드세요
- * 5.컨테이너에서 수업 객체를 꺼내세요
- * 6.수업의 담당교사를 꺼내세요
+ * 5.Class타입의 변수를 선언하고 컨테이너에서 객체를 주입받으세요
+ * 6.Teacher타입의 변수를 선언하고 컨테이너에서 객체를 주입받으세요
+ * 7.수업와 교사를 사용하여 교사의 주소를 확인하세요
  * */
 
 @SpringBootTest
@@ -26,10 +27,9 @@ public class Quiz4 {
 	
 	@Test
 	void test() {
-		System.out.println("class1: " + class1);
-		
+
 		System.out.println("teacher: " + teacher);
 		
-		System.out.println("getTeacher(): " + class1.getTeacher());	
+		System.out.println("getTeacher(): " + class1.getTeacher());	// 두 객체의 주소가 같음
 	}
 }
