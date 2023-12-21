@@ -26,6 +26,6 @@ public class Quiz1 {
 		System.out.println(book1.getPage());
 		
 		Book book2 = new Book("스프링부트",30000,"남가락북스",400);
-		System.out.println(book2);
+		System.out.println(book2.toString());
 	}
 }

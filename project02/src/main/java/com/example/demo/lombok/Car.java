@@ -6,6 +6,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+/* 자동차 클래스 */
+
 @Getter
 @Setter
 @ToString
