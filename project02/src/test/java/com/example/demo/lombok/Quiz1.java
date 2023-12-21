@@ -5,15 +5,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 /*
- * 1.도서클래스(Book)을 설계한다
- * 멤버변수: 제목, 가격, 출판사, 페이지수
- * 기능: 
- * 모든멤버변수의 getter/setter, 
- * 디폴트생성자, 
- * 모든멤버변수를 초기화하는 생성자, 
- * 도서정보를 반환하는 기능
- *
- * 2.도서 인스턴스를 생성하고, 도서 클래스가 가진 기능을 테스트한다
+ * 1.다음과 같이 도서(Book)클래스을 만드세요
+ * 속성: 제목, 가격, 출판사, 페이지수
+ * 기능: 모든멤버변수의 getter/setter, 디폴트생성자, 모든멤버변수를 초기화하는 생성자, 도서정보를 반환하는 기능 
+ * 2.도서의 인스턴스를 생성하고, 인스턴스가 가지고 있는 기능을 사용하세요
  * */
 @SpringBootTest
 public class Quiz1 {

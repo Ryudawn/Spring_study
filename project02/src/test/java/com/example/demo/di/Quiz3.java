@@ -5,13 +5,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 /*
- * 1.카페매니저 클래스(Manager)을 만든다
- * 2.카페 클래스(Cafe)을 만든다
- * 카페매니저를 멤버변수로 가진다
- * 3.스프링컨테이너에 카페와 매니저 객체를 저장한다
- * 4.단위테스트 클래스를 만든다
- * 5.컨테이너에서 카페 객체를 꺼낸다
- * 6.카페가 가지고 있는 매니저 객체를 꺼낸다
+ * 1.다음과 같이 카페매니저(Manager)클래스를 만드세요
+ * - 아무것도 없음
+ * 2.다음과 같이 카페(Cafe)클래스를 만드세요
+ * - 속성: 카페매니저
+ * 3.스프링컨테이너에 카페, 매니저 객체를 저장하세요
+ * 4.단위테스트 클래스를 만드세요
+ * 5.컨테이너에서 카페 객체를 꺼내세요
+ * 6.카페의 매니저를 꺼내세요
  * */
 
 @SpringBootTest

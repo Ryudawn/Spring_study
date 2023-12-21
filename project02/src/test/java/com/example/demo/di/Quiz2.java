@@ -5,13 +5,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 /*
- * 1.Cat 클래스를 만든다
- * "쥐를 먹는다" 라는 메세지를 출력하는 eat()메소드를 가지고 있다
- * 2.스프링컨테이너에 고양이 객체를 저장한다
- * 3.단위테스트 클래스를 만든다
- * 3.컨테이너에서 고양이 객체를 꺼내고, eat()메소드를 호출한다.
+ * 1.다음과 같이 고양이(Cat) 클래스를 만드세요
+ * - eat 메소드: "쥐를 먹는다" 라는 메세지 출력
+ * 2.스프링컨테이너에 고양이 객체를 저장하세요
+ * 3.단위테스트 클래스를 만드세요
+ * 4.컨테이너에서 고양이 객체를 꺼내고 eat() 함수를 호출하세요
  * */
-
 @SpringBootTest
 public class Quiz2 {
 

@@ -5,13 +5,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 /*
- * 1.교사 클래스(Teacher)을 만든다
- * 2.수업 클래스(Class)을 만든다
- * 담당교사를 멤버변수로 가진다
- * 3.스프링컨테이너에 수업와 선생님 객체를 저장한다
- * 4.단위테스트 클래스를 만든다
- * 5.컨테이너에서 수업 객체를 꺼낸다
- * 6.수업이 가지고 잇는 담당교사 객체를 꺼낸다
+ * 1.다음과 같이 교사(Teacher)클래스을 만드세요
+ * - 아무것도 없음
+ * 2.다음과 같이 수업(Class)클래스을 만드세요
+ * - 속성: 담당교사
+ * 3.스프링컨테이너에 수업, 선생님 객체를 저장하세요
+ * 4.단위테스트 클래스를 만드세요
+ * 5.컨테이너에서 수업 객체를 꺼내세요
+ * 6.수업의 담당교사를 꺼내세요
  * */
 
 @SpringBootTest
