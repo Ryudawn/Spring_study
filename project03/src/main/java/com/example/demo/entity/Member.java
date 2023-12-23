@@ -1,45 +1,43 @@
 package com.example.demo.entity;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import org.springframework.format.annotation.DateTimeFormat;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EntityListeners;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
 @Entity
-@EntityListeners(AuditingEntityListener.class)
-@Table(name="tbl_order")
+@EntityListeners(AuditingEntityListener.class) // 엔티티에 변화를 감지하는 리스너 지정
+@Table(name = "tbl_member")
 @Getter
 @Setter
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
-public class Order {
+@Builder
+public class Member {
+
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	int orderNo;
+	String userId; // 회원아이디
 
-	@Column(length = 30)
-	String customerName;
+	String password; // 패스워드
 
-	@Column(length = 100)
-	String shipAddress;
+	String grade; // 등급
 
-    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    LocalDateTime orderDate;
+	@CreatedDate
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	LocalDate registerDate; // 가입일
 
 }

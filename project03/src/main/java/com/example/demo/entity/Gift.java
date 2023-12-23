@@ -13,7 +13,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 @Entity
-@Table(name="tbl_gift")
+@Table(name = "tbl_gift")
 @Getter
 @Setter
 @ToString
@@ -23,15 +23,15 @@ public class Gift {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int no;
-	
+	int no;
+
 	@Column(length = 20)
-	private String name;
-	
+	String name;
+
 	@Column(length = 20)
-	private String type;
-	
+	String type;
+
 	@Column
-    private int price;
+	int price;
 
 }

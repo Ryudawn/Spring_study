@@ -1,6 +1,5 @@
 package com.example.demo.repository;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -24,9 +23,9 @@ public class Quiz3 {
 	@Test
 	public void 데이터일괄등록() {
 		List<Order> list = new ArrayList<>();
-		LocalDateTime localDate1 = LocalDateTime.of(2023,7,1,0,0,0);
-		LocalDateTime localDate2 = LocalDateTime.of(2023,7,2,0,0,0);
-		LocalDateTime localDate3 = LocalDateTime.of(2023,7,3,0,0,0);
+		LocalDateTime localDate1 = LocalDateTime.of(2023,7,1,12,0,0);
+		LocalDateTime localDate2 = LocalDateTime.of(2023,7,2,12,0,0);
+		LocalDateTime localDate3 = LocalDateTime.of(2023,7,3,12,0,0);
 		Order order1 = new Order(0,"둘리","인천 구월동", localDate1);
 		Order order2 = new Order(0,"또치","인천 연수동",localDate2);
 		Order order3 = new Order(0,"도우너","부산 동래동",localDate3);
@@ -44,6 +43,7 @@ public class Quiz3 {
 			System.out.println(order);
 		}
 	}
+	
 	@Test
 	public void 데이터전체조회() {
 		List<Order> list = orderRepository.findAll();

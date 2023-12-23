@@ -1,35 +1,43 @@
 package com.example.demo.repository;
 
-import com.example.demo.entity.Order;
+import java.util.List;
+import java.util.Optional;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.List;
+import com.example.demo.entity.Gift;
+import com.example.demo.entity.Memo;
 
 @SpringBootTest
 public class Quiz6 {
 
 	@Autowired
-	OrderRepository2 orderRepository;
-
+	GiftRepository2 giftRepository;
+	
 	@Test
-	public void 주소지가인천인_주문검색() {
-        List<Order> list = orderRepository.get1("인천");
-        for(Order order : list) {
-            System.out.println(order);
-        }
-	}
-
-	@Test
-	public void 주문일이7월3일인_주문검색() {
-		LocalDateTime localDate = LocalDateTime.of(2023,7,3,0,0,0);
-		List<Order> list = orderRepository.get2(localDate);
-		for(Order order : list) {
-			System.out.println(order);
+	public void 가격이5만원이하인_선물검색() {
+		List<Gift> list = giftRepository.get1(50000);
+		for(Gift gift : list) {
+			System.out.println(gift);
 		}
 	}
-
+	
+	@Test
+	public void 이름이세트로끝나는_선물검색() {
+		List<Gift> list = giftRepository.get2("세트");
+		for(Gift gift : list) {
+			System.out.println(gift);
+		}
+	}
+	
+	@Test
+	public void 가격은4만원이하고_품목은생활용품인_선물검색() {
+		List<Gift> list = giftRepository.get3(40000,"생활용품");
+		for(Gift gift : list) {
+			System.out.println(gift);
+		}
+	}
+	
 }

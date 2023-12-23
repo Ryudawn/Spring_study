@@ -17,8 +17,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@EntityListeners(AuditingEntityListener.class) //엔티티에 변화를 감지하는 리스너 지정
-@Table(name="tbl_board")
+@EntityListeners(AuditingEntityListener.class) // 엔티티에 변화를 감지하는 리스너 지정
+@Table(name = "tbl_board")
 @Getter
 @Setter
 @ToString
@@ -26,21 +26,22 @@ import jakarta.persistence.Table;
 @AllArgsConstructor
 @Builder
 public class Board {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int boardNo;
-	
+	int boardNo;
+
 	@Column(length = 30, nullable = false)
-	private String title;
-	
+	String title;
+
 	@Column(length = 200)
-	private String content;
-	
-	@CreatedDate //인스턴스가 생성되는 것을 감지하여 일자를 저장
-    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    private LocalDateTime createdDate;
-	
-    @LastModifiedDate //인스턴스가 수정되는 것을 감지하여 일자를 저장
-    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    private LocalDateTime modifiedDate;
+	String content;
+
+	@CreatedDate // 인스턴스가 생성되는 것을 감지하여 날짜를 저장
+	@DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+	LocalDateTime createdDate;
+
+	@LastModifiedDate // 인스턴스가 수정되는 것을 감지하여 날짜를 저장
+	@DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+	LocalDateTime modifiedDate;
 }
