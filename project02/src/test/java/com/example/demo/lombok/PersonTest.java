@@ -21,6 +21,10 @@ public class PersonTest {
 		
 		Person person2 = new Person("또치",15); //모든 멤버를 입력받는 생성자 
 		System.out.println(person2.toString()); //재정의된 toString
+		
+		Person person3 = Person.builder().name("도우너").age(17).build();
+		// 메소드 체인 패턴으로 객체를 생성하는 생성자 
+		// 객체의 정보가 명확하게 보이는 것이 장점
 
 	}
 	

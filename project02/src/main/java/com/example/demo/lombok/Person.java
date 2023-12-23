@@ -1,6 +1,7 @@
 package com.example.demo.lombok;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,6 +14,7 @@ import lombok.ToString;
 @ToString
 @NoArgsConstructor //생성자
 @AllArgsConstructor //생성자
+@Builder //생성자
 public class Person {
 	
 	String name;
