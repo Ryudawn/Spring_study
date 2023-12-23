@@ -22,7 +22,7 @@ public class Quiz1 {
 	@Test
 	public void 데이터일괄등록() {
 		List<Book> list = new ArrayList<>();
-		Book book1 = new Book(0,"자바프로그래밍입문","한빛출판사",20000);
+		Book book1 = new Book(0,"자바프로그래밍입문","한빛출판사",20000); // 책번호는 자동으로 생략되므로 no는 생략 
 		Book book2 = new Book(0,"스프링부트프로젝트","남가람북스",25000);
 		Book book3 = new Book(0,"실무로 끝내는 PHP","남가람북스",40000);
 		Book book4 = new Book(0,"알고리즘코딩테스트","이지스퍼블리싱",35000);

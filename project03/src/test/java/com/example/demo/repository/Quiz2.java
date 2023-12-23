@@ -19,17 +19,20 @@ import com.example.demo.entity.Gift;
 public class Quiz2 {
 	@Autowired
 	GiftRepository giftRepository;
-	
+
 	@Test
 	public void 데이터일괄등록() {
 		List<Gift> list = new ArrayList<>();
-		Gift gift1 = new Gift(0,"참치세트","식품",10000);
-		Gift gift2 = new Gift(0,"햄세트","식품",20000);
-		Gift gift3 = new Gift(0,"샴푸세트","생활용품",30000);
-		Gift gift4 = new Gift(0,"세차용품","생활용품",40000);
-		Gift gift5 = new Gift(0,"주방용품","생활용품",50000);
-		Gift gift6 = new Gift(0,"노트북","가전제품",60000);
-		Gift gift7 = new Gift(0,"벽걸이TV","가전제품",70000);
+		
+		// 선물번호는 자동으로 생략되므로 no는 생략 
+		Gift gift1 = Gift.builder().name("참치세트").type("식품").price(10000).build();
+		Gift gift2 = Gift.builder().name("햄세트").type("식품").price(20000).build();
+		Gift gift3 = Gift.builder().name("샴푸세트").type("생활용품").price(30000).build();
+		Gift gift4 = Gift.builder().name("세차용품").type("생활용품").price(40000).build();
+		Gift gift5 = Gift.builder().name("주방용품").type("생활용품").price(50000).build();
+		Gift gift6 = Gift.builder().name("노트북").type("가전제품").price(60000).build();
+		Gift gift7 = Gift.builder().name("벽걸이TV").type("가전제품").price(70000).build();
+		
 		list.add(gift1);
 		list.add(gift2);
 		list.add(gift3);
@@ -37,38 +40,40 @@ public class Quiz2 {
 		list.add(gift5);
 		list.add(gift6);
 		list.add(gift7);
+		
 		giftRepository.saveAll(list);
 	}
-	
+
 	@Test
 	public void 데이터단건조회() {
 		Optional<Gift> result = giftRepository.findById(1);
-		if(result.isPresent()) {
+		if (result.isPresent()) {
 			Gift gift = result.get();
 			System.out.println(gift);
 		}
 	}
+
 	@Test
 	public void 데이터전체조회() {
 		List<Gift> list = giftRepository.findAll();
-		for(Gift gift : list) {
+		for (Gift gift : list) {
 			System.out.println(gift);
 		}
 	}
-	
+
 	@Test
 	public void 데이터수정() {
 		Optional<Gift> result = giftRepository.findById(1);
 		Gift gift = result.get();
 		gift.setPrice(100000);
-		giftRepository.save(gift);	
+		giftRepository.save(gift);
 	}
-	
+
 	@Test
 	public void 데이터삭제() {
 		giftRepository.deleteById(1);
 	}
-	
+
 	@Test
 	public void 데이터전체삭제() {
 		giftRepository.deleteAll();
