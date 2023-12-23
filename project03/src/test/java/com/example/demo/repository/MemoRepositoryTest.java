@@ -43,7 +43,7 @@ public class MemoRepositoryTest {
 	
 	@Test
 	public void 데이터단건조회() {
-		Optional<Memo> result = memoRepository.findById(1); //조회결과를 optional로 반환
+		Optional<Memo> result = memoRepository.findById(1); //조회결과를 optional로 반환. 결과가 존재하는지 확인하는 형태
 		if(result.isPresent()) { //결과값이 있는지 확인
 			Memo memo = result.get(); //값 꺼내기
 			System.out.println(memo);
