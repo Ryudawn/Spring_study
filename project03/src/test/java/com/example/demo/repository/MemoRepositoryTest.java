@@ -27,8 +27,8 @@ public class MemoRepositoryTest {
 	
 	@Test
 	public void 데이터등록() {
-		Memo memo1 = new Memo(0,"새글입니다");  //no는 auto_increment조건이므로 빈값 넣기
-		memoRepository.save(memo1);	 //1번이 존재하는지 확인하고 insert 실행
+		Memo memo = new Memo(0,"새글입니다");  //no는 auto_increment조건이므로 빈값 넣기
+		memoRepository.save(memo);	 //1번이 존재하는지 확인하고 insert 실행
 	}
 
 	@Test

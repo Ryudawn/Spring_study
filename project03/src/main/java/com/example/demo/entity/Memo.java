@@ -19,8 +19,6 @@ import lombok.ToString;
 
 @Entity //엔티티 클래스임을 명시
 @Table(name="tbl_memo") //테이블 이름. 생략하면 클래스 이름과 동일한 이름으로 생성됨
-@Getter
-@Setter
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
@@ -28,8 +26,8 @@ public class Memo {
 	
 	@Id //PK. 엔티티는 PK에 해당하는 필드를 지정해야함
 	@GeneratedValue(strategy = GenerationType.IDENTITY) //PK를 자동으로 생성할 때 사용 (Auto increment 방식)
-	private int no;
+	int no;
 	
 	@Column(length = 200, nullable = true) //컬럼의 제약사항 지정
-	private String text; //컬럼의 타입과 이름 지정
+	String text; //컬럼의 타입과 이름 지정
 }
