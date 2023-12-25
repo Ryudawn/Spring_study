@@ -21,10 +21,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RequestMapping("/sample")
 public class SampleController {
 
-    @GetMapping("/ex1")
-    public void ex1() {
-    }
-
     @GetMapping("/ex2")
     public void ex2(Model model){ //Model은 화면에 값을 전달하는 역할
         model.addAttribute("msg", "안녕하세요"); //(변수명,값) 화면에 문자열 전달

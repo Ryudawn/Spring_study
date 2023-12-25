@@ -14,14 +14,6 @@ import com.example.demo.dto.PersonDTO;
 @RequestMapping("/quiz")
 public class QuizController {
 
-    @GetMapping("/q1")
-    public void ex1(){
-    }
-    
-    @GetMapping("/q2")
-    public void ex2(){
-    }
-    
     @GetMapping("/q3")
     public void ex3(Model model){
         model.addAttribute("name", "둘리");
