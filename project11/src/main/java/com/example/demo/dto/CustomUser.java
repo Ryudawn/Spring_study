@@ -1,10 +1,10 @@
 package com.example.demo.dto;
 
 
-import java.util.Arrays;
-
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
+
+import java.util.Arrays;
 
 public class CustomUser extends User {
 

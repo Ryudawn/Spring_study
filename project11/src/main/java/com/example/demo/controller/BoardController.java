@@ -1,7 +1,5 @@
 package com.example.demo.controller;
 
-import java.security.Principal;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
@@ -23,10 +21,13 @@ public class BoardController {
 	private BoardService service;
 
 	@GetMapping("/list")
-	public void list(@RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "") String search, Model model) {
-		Page<BoardDTO> list = service.getList(page, search);
+	public void list(@RequestParam(defaultValue = "0") int page, Model model) {
+		Page<BoardDTO> list = service.getList(page);
 		model.addAttribute("list", list);	
-		System.out.println("검색키워드: " + search);
+		System.out.println("전체 페이지 수: " + list.getTotalPages());
+		System.out.println("전체 게시물 수: " + list.getTotalElements());
+		System.out.println("현재 페이지 번호: " + (list.getNumber() + 1));
+		System.out.println("페이지에 표시할 게시물 수: " + list.getNumberOfElements());
 	}
 
 	@GetMapping("/register")
@@ -34,9 +35,7 @@ public class BoardController {
 	}
 
 	@PostMapping("/register")
-	public String registerPost(BoardDTO dto, RedirectAttributes redirectAttributes, Principal principal) {
-		String memberId = principal.getName(); 
-		dto.setWriter(memberId); //작성자에 로그인한 회원의 아이디 저장
+	public String registerPost(BoardDTO dto, RedirectAttributes redirectAttributes) {
 		int no = service.register(dto);
 		redirectAttributes.addFlashAttribute("msg", no);
 		return "redirect:/board/list";

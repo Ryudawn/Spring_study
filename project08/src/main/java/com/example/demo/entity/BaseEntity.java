@@ -10,15 +10,15 @@ import jakarta.persistence.EntityListeners;
 import jakarta.persistence.MappedSuperclass;
 import java.time.LocalDateTime;
 
-@MappedSuperclass
-@EntityListeners(value = { AuditingEntityListener.class })
+@MappedSuperclass //JPA가 해당클래스는 테이블로 생성하지 않음
+@EntityListeners(value = { AuditingEntityListener.class }) //엔티티에 변화를 감지하는 리스너 지정
 @Getter
 abstract class BaseEntity {
 
-    @CreatedDate
+    @CreatedDate //인스턴스가 생성되는 것을 감지하여 일자를 저장
     LocalDateTime regDate;
 
-    @LastModifiedDate
+    @LastModifiedDate //인스턴스가 수정되는 것을 감지하여 일자를 저장
     LocalDateTime modDate;
 
 }

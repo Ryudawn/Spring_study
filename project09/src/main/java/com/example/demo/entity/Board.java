@@ -7,7 +7,7 @@ import lombok.*;
 @Entity
 @Getter
 @Setter
-@ToString
+@ToString(exclude = "writer") //게시물을 출력할 때 회원정보는 제외
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
@@ -23,7 +23,7 @@ public class Board extends BaseEntity {
     @Column(length = 1500, nullable = false)
     private String content;
 
-    @Column(length = 50, nullable = false)
-    private String writer;
+    @ManyToOne
+    private Member writer;
 
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<th:block th:replace="~{layout/basic :: setContent(~{this::content} )}">
+<th:block th:replace="~{/layout/basic :: setContent(~{this::content} )}">
 
     <th:block th:fragment="content">
 
@@ -23,6 +23,10 @@
             <textarea class="form-control" rows="5" name="content">[[${dto.content}]]</textarea>
         </div>
         <div class="form-group">
+            <label >작성자</label>
+            <input type="text" class="form-control" name="writer" th:value="${dto.writer}" readonly>
+        </div>
+        <div class="form-group">
             <label >등록일</label>
             <input type="text" class="form-control" th:value="${#temporals.format(dto.regDate, 'yyyy/MM/dd HH:mm:ss')}" readonly>
         </div>
@@ -30,16 +34,6 @@
             <label >수정일</label>
             <input type="text" class="form-control" th:value="${#temporals.format(dto.modDate, 'yyyy/MM/dd HH:mm:ss')}" readonly>
         </div>
-        <!-- 첨부파일 입력필드 추가 -->
-        <th:block th:if="${dto.imgPath!=null}">  <!-- 이미지가 있으면 출력 -->
-            <div class="form-group">
-            	<img th:src="@{'/uploadfile/'+${dto.imgPath}}">
-        	</div>
-        </th:block>
-        <div class="form-group">
-			<label>첨부파일</label>
-			<input type="file" class="form-control" name="uploadFile"/>
-		</div>
 
         </form>
 
@@ -62,7 +56,6 @@
                 form
                     .attr("action", "/board/modify")
                     .attr("method","post")
-                    .attr("enctype","multipart/form-data")
                     .submit();
             });
 

@@ -18,14 +18,14 @@ public class BoardServiceTest {
 	@Test
 	public void 게시물30개추가() {
 		for(int i=1; i<=30; i++) {
-			service.register(new BoardDTO(0,i+"번글","안녕하세요","user1",null,null));
+			service.register(new BoardDTO(0,i+"번글","안녕하세요","둘리",null,null));	
 		}
 	}
 	
 	@Test
 	public void 게시물목록조회() {
-		Page<BoardDTO> page = service.getList(1);
-		List<BoardDTO> list = page.getContent();
+		Page<BoardDTO> page = service.getList(1); //첫번째 페이지 조회
+		List<BoardDTO> list = page.getContent(); //게시물 목록 꺼내기
 		for(BoardDTO dto : list) {
 			System.out.println(dto);
 		}

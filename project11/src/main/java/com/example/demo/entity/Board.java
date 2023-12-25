@@ -1,17 +1,7 @@
 package com.example.demo.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import jakarta.persistence.*;
+import lombok.*;
 
 
 @Entity
@@ -35,8 +25,5 @@ public class Board extends BaseEntity {
 
     @ManyToOne
     private Member writer;
-    
-    @Column(length = 200, nullable = true)
-	private String imgPath; //첨부파일 이름
 
 }

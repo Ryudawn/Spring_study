@@ -1,13 +1,14 @@
 package com.example.demo.repository;
 
-import com.example.demo.entity.Member;
-import jakarta.transaction.Transactional;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import java.util.List;
-import java.util.Optional;
+import com.example.demo.entity.Member;
 
 
 @SpringBootTest
@@ -23,6 +24,15 @@ public class MemberRepositoryTest {
 	public void 회원등록() {
 		Member member = new Member("user1","1234","둘리");
 		memberRepository.save(member);
+	}
+	
+	@Test
+	public void 회원일괄등록() {
+		List<Member> list = new ArrayList<>();
+		for(int i=0; i<30;i++) {
+			list.add(new Member("user"+i,"1234","둘리"));
+		}
+		memberRepository.saveAll(list);
 	}
 
 	@Test

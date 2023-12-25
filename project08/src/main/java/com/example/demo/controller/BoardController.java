@@ -20,8 +20,13 @@ public class BoardController {
 	@Autowired
 	private BoardService service;
 
+//	@GetMapping("/main")
+//	public void main() {
+//	}
+
+	/* 목록화면 메소드 수정 */
 	@GetMapping("/list")
-	public void list(@RequestParam(defaultValue = "0") int page, Model model) {
+	public void list(@RequestParam(defaultValue = "0") int page, Model model) { //페이지 번호 파라미터 추가
 		Page<BoardDTO> list = service.getList(page);
 		model.addAttribute("list", list);	
 		System.out.println("전체 페이지 수: " + list.getTotalPages());
@@ -41,11 +46,12 @@ public class BoardController {
 		return "redirect:/board/list";
 	}
 
+	/* 상세화면 메소드 수정 */
 	@GetMapping("/read")
-	public void read(int no, @RequestParam(defaultValue = "0") int page, Model model) {
+	public void read(int no, @RequestParam(defaultValue = "0") int page, Model model) { //페이지 번호 파라미터 추가
 		BoardDTO dto = service.read(no);
 		model.addAttribute("dto", dto);
-		model.addAttribute("page", page);
+		model.addAttribute("page", page); //화면에 페이지번호 전달
 	}
 
 	@GetMapping("/modify")

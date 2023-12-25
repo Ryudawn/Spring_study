@@ -12,11 +12,14 @@ import java.time.LocalDateTime;
 @Builder
 public class MemberDTO {
 
-    private String id;
-    private String password;
-    private String name;
-    private LocalDateTime regDate;
-    private LocalDateTime modDate;
-    private String role; //사용자 등급 추가 (사용자:ROLE_USER, 관리자:ROLE_ADMIN)
-
+    private String id; //아이디
+    
+    private String password; //패스워드
+    
+    private String name; //이름
+    
+    private LocalDateTime regDate; //등록일
+    
+    private LocalDateTime modDate; //수정일
+    
 }

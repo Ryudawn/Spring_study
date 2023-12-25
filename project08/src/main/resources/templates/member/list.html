@@ -15,6 +15,7 @@
 				</tr>
 			</thead>
 			<tbody>
+				<!-- 회원 정보 반복처리 -->
 				<tr th:each="dto : ${list}">					
 					<th scope="row">
 						<a th:href="@{/member/read(id = ${dto.id}, page= ${list.number + 1})}">
@@ -28,6 +29,7 @@
 			</tbody>
 		</table>
 
+		<!-- 페이징 추가 -->
 	    <ul class="pagination h-100 justify-content-center align-items-center">
 
 	         <li th:class=" 'page-item ' + ${(list.number + 1) == page?'active':''} " th:each="page: ${#numbers.sequence(1, list.totalPages)}">

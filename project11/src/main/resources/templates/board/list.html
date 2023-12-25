@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<th:block th:replace="~{layout/basic :: setContent(~{this::content} )}">
+<th:block th:replace="~{/layout/basic :: setContent(~{this::content} )}">
 
 	<th:block th:fragment="content">
 
@@ -11,13 +11,8 @@
                     <button type="button" class="btn btn-outline-primary">게시물 등록</button>
                 </a>
             </span>
-		</h1>		
-		
-		<!-- 검색 -->
-		<div class="col-lg-2 ms-auto rounded" >			
-			<input class="form-control" id="searchInput" type="text" placeholder="search..." aria-label="Search" onkeyup="if(window.event.keyCode==13){onSearch();}">			
-		</div>   
-		
+		</h1>
+
 		<table class="table table-striped">
 			<thead>
 				<tr>
@@ -61,14 +56,6 @@
 				  alert(msg + "번 글이 등록되었습니다.");
 			  }
 			});
-			
-			//검색 이벤트
-			function onSearch(){
-				console.log('aa');
-				let searchInput = document.getElementById("searchInput");    	       
-    	        let link = '/board/list?search=' + searchInput.value;	        
-    	        location.href=link;    	        
-			}
 		</script>
 
 	</th:block>

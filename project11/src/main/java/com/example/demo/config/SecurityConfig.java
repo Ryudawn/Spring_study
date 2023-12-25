@@ -19,10 +19,10 @@ public class SecurityConfig{
 	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 
 	    http.authorizeHttpRequests()
-				.requestMatchers("/register","/idcheck").permitAll()
-				.requestMatchers("/assets/*","/css/*","/js/*","/uploadfile/*").permitAll() //uploadfile 파일 경로 추가
+				.requestMatchers("/register","/idcheck").permitAll() //아이디중복체크 경로 추가 
+				.requestMatchers("/assets/*","/css/*","/js/*").permitAll()
 				.requestMatchers("/").authenticated()
-				.requestMatchers("/board/*","/comment/*").hasAnyRole("ADMIN","USER") //댓글 경로 추가 
+				.requestMatchers("/board/*").hasAnyRole("ADMIN","USER")
 				.requestMatchers("/member/*").hasRole("ADMIN");
 
         http.csrf().disable();

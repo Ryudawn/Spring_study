@@ -25,12 +25,13 @@ public class BoardServiceImpl implements BoardService {
 		return entity.getNo();
 	}
 
+	/* 목록조회 메소드 변경 */
 	@Override
-	public Page<BoardDTO> getList(int page) {
-		int pageNum = (page == 0) ? 0 : page - 1;
-		Pageable pageable = PageRequest.of(pageNum, 10, Sort.by("no").descending());
-		Page<Board> entityPage = repository.findAll(pageable);
-		Page<BoardDTO> dtoPage = entityPage.map( entity -> entityToDto(entity) );
+	public Page<BoardDTO> getList(int page) { //페이지 번호 받기
+		int pageNum = (page == 0) ? 0 : page - 1; //page index는 0부터 시작
+		Pageable pageable = PageRequest.of(pageNum, 10, Sort.by("no").descending()); //페이지번호, 게시물개수, 정렬방법을 입력하여 페이지 객체 만들기
+		Page<Board> entityPage = repository.findAll(pageable); //게시물 목록을 페이지에 담아서 조회하기
+		Page<BoardDTO> dtoPage = entityPage.map( entity -> entityToDto(entity) ); //엔티티 타입의 페이지를 DTO 타입으로 변환
 
 		return dtoPage;
 	}

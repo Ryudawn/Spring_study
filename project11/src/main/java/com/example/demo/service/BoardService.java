@@ -1,16 +1,16 @@
 package com.example.demo.service;
 
+import com.example.demo.entity.Member;
 import org.springframework.data.domain.Page;
 
 import com.example.demo.dto.BoardDTO;
 import com.example.demo.entity.Board;
-import com.example.demo.entity.Member;
 
 public interface BoardService {
 
 	int register(BoardDTO dto);
 
-	Page<BoardDTO> getList(int pageNumber, String search);
+	Page<BoardDTO> getList(int pageNumber);
 
 	BoardDTO read(int no);
 
@@ -39,7 +39,6 @@ public interface BoardService {
 				.writer(entity.getWriter().getId())
 				.regDate(entity.getRegDate())
 				.modDate(entity.getModDate())
-				.imgPath(entity.getImgPath()) //이미지경로 추가
 				.build();
 
 		return dto;

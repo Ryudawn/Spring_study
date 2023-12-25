@@ -1,15 +1,13 @@
 package com.example.demo.dto;
 
-import java.time.LocalDateTime;
-
-import org.springframework.web.multipart.MultipartFile;
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
@@ -25,6 +23,4 @@ public class BoardDTO {
     private String writer;
     private LocalDateTime regDate;
     private LocalDateTime modDate;
-	private MultipartFile uploadFile; //파일 스트림
-	private String imgPath; //파일 이름
 }

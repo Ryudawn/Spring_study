@@ -9,10 +9,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 @Service
 public class BoardServiceImpl implements BoardService {
@@ -29,13 +26,13 @@ public class BoardServiceImpl implements BoardService {
 	}
 
 	@Override
-	public List<BoardDTO> getList() {
-		List<Board> entityList = repository.findAll();		
-		List<BoardDTO> dtoList = entityList.stream()
-				.map(entity -> entityToDto(entity))
-				.collect(Collectors.toList());
+	public Page<BoardDTO> getList(int page) {
+		int pageNum = (page == 0) ? 0 : page - 1;
+		Pageable pageable = PageRequest.of(pageNum, 10, Sort.by("no").descending());
+		Page<Board> entityPage = repository.findAll(pageable);
+		Page<BoardDTO> dtoPage = entityPage.map( entity -> entityToDto(entity) );
 
-		return dtoList;
+		return dtoPage;
 	}
 
 	@Override

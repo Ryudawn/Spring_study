@@ -17,15 +17,12 @@ public class Member extends BaseEntity {
 
     @Id
     @Column(length = 50)
-    private String id;
+    private String id; //아이디
 
     @Column(length = 200, nullable = false)
-    private String password;
+    private String password; //패스워드
 
     @Column(length = 100, nullable = false)
-    private String name;
-
-    @Column(length = 100, nullable = false)
-    private String role; //사용자 등급 추가
+    private String name; //이름
 
 }

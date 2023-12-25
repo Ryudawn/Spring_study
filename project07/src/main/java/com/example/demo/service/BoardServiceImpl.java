@@ -1,66 +1,82 @@
 package com.example.demo.service;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.example.demo.dto.BoardDTO;
 import com.example.demo.entity.Board;
 import com.example.demo.repository.BoardRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
-import org.springframework.stereotype.Service;
-import java.util.Optional;
 
-@Service
+@Service // 비즈니스 로직을 처리하는 역할을 명시
 public class BoardServiceImpl implements BoardService {
 
 	@Autowired
-	private BoardRepository repository;
+	private BoardRepository repository; // 사용할 리파지토리를 멤버로 선언
 
 	@Override
 	public int register(BoardDTO dto) {
-		Board entity = dtoToEntity(dto);
-		repository.save(entity);
+		Board entity = dtoToEntity(dto); // 컨트롤러에서 전달받은 dto를 엔티티로 변환
+		repository.save(entity); // 리파티토리에 엔티티를 전달하여 저장
 
-		return entity.getNo();
+		return entity.getNo(); // 새로 등록된 게시물의 번호를 반환
 	}
 
-	/* 목록조회 메소드 변경 */
 	@Override
-	public Page<BoardDTO> getList(int page) { //페이지 번호 받기
-		int pageNum = (page == 0) ? 0 : page - 1; //page index는 0부터 시작
-		Pageable pageable = PageRequest.of(pageNum, 10, Sort.by("no").descending()); //페이지번호, 게시물개수, 정렬방법을 입력하여 페이지 객체 만들기
-		Page<Board> entityPage = repository.findAll(pageable); //게시물 목록을 페이지에 담아서 조회하기
-		Page<BoardDTO> dtoPage = entityPage.map( entity -> entityToDto(entity) ); //엔티티 타입의 페이지를 DTO 타입으로 변환
+	public List<BoardDTO> getList() {
+		List<Board> result = repository.findAll(); // 데이터베이스에서 게시물 목록을 가져온다
+		List<BoardDTO> list = new ArrayList<>();
+		list = result.stream() // 리스트에서 스트림 생성
+				.map(entity -> entityToDto(entity)) // 중간연산으로 엔티티를 dto로 변환
+				.collect(Collectors.toList()); // 최종연산으로 결과를 리스트로 변환
 
-		return dtoPage;
+		return list; // 화면에 필요한 dto 리스트 반환
 	}
 
 	@Override
 	public BoardDTO read(int no) {
-        Optional<Board> result = repository.findById(no);
-        if(result.isPresent()) {
-        	Board board =  result.get();
-        	return entityToDto(board);
-        } else {
-        	return null;
-        }
+
+		Optional<Board> result = repository.findById(no);
+
+		if (result.isPresent()) {
+			Board board = result.get();
+			return entityToDto(board);
+		} else {
+			return null;
+		}
 	}
 
 	@Override
 	public void modify(BoardDTO dto) {
-        Optional<Board> result = repository.findById(dto.getNo());
-        if(result.isPresent()){
-            Board entity = result.get();
-            entity.setTitle(dto.getTitle());
-            entity.setContent(dto.getContent());
-            repository.save(entity);
-        }
+		// 업데이트 하는 항목은 '제목', '내용'
+		Optional<Board> result = repository.findById(dto.getNo());
+		if (result.isPresent()) { // 해당 게시물이 존재하는지 확인
+			Board entity = result.get();
+
+			entity.setTitle(dto.getTitle());
+			entity.setContent(dto.getContent());
+
+			repository.save(entity);
+		}
+
 	}
 
 	@Override
-	public void remove(int no) {
-		repository.deleteById(no);
+	public int remove(int no) {
+
+		Optional<Board> result = repository.findById(no);
+		
+		if (result.isPresent()) {
+			repository.deleteById(no);
+			return 1; //성공
+		}else {
+			return 0; //실패
+		}
+		
 	}
 
 }

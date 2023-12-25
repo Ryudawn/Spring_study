@@ -7,7 +7,7 @@ import lombok.*;
 @Entity
 @Getter
 @Setter
-@ToString(exclude = "writer")
+@ToString
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
@@ -23,7 +23,7 @@ public class Board extends BaseEntity {
     @Column(length = 1500, nullable = false)
     private String content;
 
-    @ManyToOne
-    private Member writer;
+    @Column(length = 50, nullable = false)
+    private String writer;
 
 }

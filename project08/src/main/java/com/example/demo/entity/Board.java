@@ -23,7 +23,11 @@ public class Board extends BaseEntity {
     @Column(length = 1500, nullable = false)
     private String content;
 
-    @ManyToOne
-    private Member writer;
+//    @Column(length = 50, nullable = false)
+//    private String writer; //작성자
+    
+    /* 작성자 필드는 외래키이며, 회원 엔티티를 참조한다 */
+    @ManyToOne //다대일 관계 적용
+    private Member writer; //연관 관계 설정
 
 }
