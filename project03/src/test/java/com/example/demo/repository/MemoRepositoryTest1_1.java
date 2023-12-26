@@ -15,7 +15,7 @@ import com.example.demo.entity.Memo;
  * 메모테이블의 데이터를 등록, 조회, 수정, 삭제한다
  * */
 @SpringBootTest
-public class MemoRepositoryTest {
+public class MemoRepositoryTest1_1 {
 
 	@Autowired
 	MemoRepository memoRepository;
