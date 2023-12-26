@@ -9,8 +9,4 @@ public class Cafe {
 	@Autowired
 	Manager manager;
 
-	public Manager getManager() {
-		return manager;
-	}
-	
 }

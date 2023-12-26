@@ -26,10 +26,17 @@ public class Quiz3 {
 	Manager manager;
 	
 	@Test
-	void test() {
+	void 객체가생성되었는지확인() {
 
+		System.out.println("cafe: " + cafe);
 		System.out.println("manager: " + manager);
-		
-		System.out.println("getManager(): " + cafe.getManager()); // 두 객체의 주소가 같음
 	}
+
+	@Test
+	void 두객체가같은지확인() {
+		// 두 객체의 주소가 같음
+		System.out.println("manager: " + manager);
+		System.out.println("cafe의 manager: " + cafe.manager);
+	}
+
 }
