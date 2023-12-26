@@ -35,7 +35,7 @@ public class MemoRepositoryTest1_2 {
 	@Test
 	void 페이징처리() {
 		// 페이지번호와 데이터개수를 담아서 페이지 정보 생성
-		Pageable pageable = PageRequest.of(0, 10);
+		Pageable pageable = PageRequest.of(0, 10); // 페이지번호 바꿔보기
 
 		// 페이지 정보를 전달하여 데이터 조회하기
 		Page<Memo> page = repository.findAll(pageable);
