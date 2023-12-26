@@ -7,11 +7,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 /*
- * 1.다음과 같이 영화(Movie) 클래스을 설계하세요
+ * 1) 다음과 같이 영화(Movie) 클래스을 설계하세요
  * 속성: 제목, 감독, 개봉일
  * 기능: 모든멤버변수의 getter/setter, 디폴트생성자, 모든멤버변수를 초기화하는 생성자, 학생정보를 반환하는 기능
- * 2.영화의 인스턴스를 3개 생성하세요 
- * 3.영화의 모든 정보를 출력하세요
+ * 2) 영화의 인스턴스를 3개 생성하세요
+ * 3) 영화의 모든 정보를 출력하세요
  * */
 @SpringBootTest
 public class Quiz4 {
