@@ -33,5 +33,7 @@ public class PersonTest {
 	 * 사용방법
 	 * @Test가 붙은 메소드 선택 > 우클릭 > Run As 메뉴 선택 > Junit Test 메뉴 선택
 	 * */
+	
+	/* Person과 Test 클래스를 분할창으로 놓고, 어노테이션 하나씩 확인 */
 
 }
