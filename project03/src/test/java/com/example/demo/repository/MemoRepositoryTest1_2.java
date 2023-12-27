@@ -25,11 +25,18 @@ public class MemoRepositoryTest1_2 {
 	@Test
 	void 메모데이터100개등록() {
 		// 1~100까지 숫자를 가지는 스트림을 생성하고, forEach 최종연산자로 반복작업을 수행
-		// 숫자를 하나씩 꺼내면서 새로운 메모를 테이블에 추가
-		IntStream.rangeClosed(1, 100).forEach(i -> {
+		IntStream.rangeClosed(1,100).forEach(i -> System.out.println(i));
+		
+		// 메모 100개를 생성해서 테이블에 추가
+		IntStream.rangeClosed(1, 50).forEach(i -> {
 			Memo memo = Memo.builder().text("Sample.." + i).build();
 			repository.save(memo);
 		});
+		IntStream.rangeClosed(51, 100).forEach(i -> {
+			Memo memo = Memo.builder().build();
+			repository.save(memo);
+		});
+
 	}
 
 	@Test
