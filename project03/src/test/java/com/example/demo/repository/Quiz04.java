@@ -15,7 +15,7 @@ import com.example.demo.entity.Member;
  * 그리고 테이블에 데이터를 조회, 수정, 삭제 하세요.
  * */
 @SpringBootTest
-public class Quiz4 {
+public class Quiz04 {
 	
 	@Autowired
 	MemberRepository repository;

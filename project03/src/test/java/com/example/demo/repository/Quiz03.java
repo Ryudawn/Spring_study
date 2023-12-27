@@ -1,6 +1,6 @@
 package com.example.demo.repository;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -8,6 +8,7 @@ import java.util.Optional;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+
 import com.example.demo.entity.Order;
 
 /*
@@ -16,16 +17,16 @@ import com.example.demo.entity.Order;
  * 그리고 테이블에 데이터를 조회, 수정, 삭제 하세요.
  * */
 @SpringBootTest
-public class Quiz3 {
+public class Quiz03 {
 	@Autowired
 	OrderRepository orderRepository;
 
 	@Test
 	public void 데이터일괄등록() {
 		List<Order> list = new ArrayList<>();
-		LocalDateTime localDate1 = LocalDateTime.of(2023,7,1,12,0,0);
-		LocalDateTime localDate2 = LocalDateTime.of(2023,7,2,12,0,0);
-		LocalDateTime localDate3 = LocalDateTime.of(2023,7,3,12,0,0);
+		LocalDate localDate1 = LocalDate.of(2023,7,1);
+		LocalDate localDate2 = LocalDate.of(2023,7,2);
+		LocalDate localDate3 = LocalDate.of(2023,7,3);
 		Order order1 = new Order(0,"둘리","인천 구월동", localDate1);
 		Order order2 = new Order(0,"또치","인천 연수동",localDate2);
 		Order order3 = new Order(0,"도우너","부산 동래동",localDate3);

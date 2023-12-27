@@ -16,7 +16,7 @@ import com.example.demo.entity.Gift;
  * 그리고 테이블에 데이터를 조회, 수정, 삭제 하세요.
  * */
 @SpringBootTest
-public class Quiz2 {
+public class Quiz02 {
 	@Autowired
 	GiftRepository giftRepository;
 

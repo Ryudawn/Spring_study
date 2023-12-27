@@ -1,9 +1,7 @@
 package com.example.demo.entity;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -39,7 +37,7 @@ public class Order {
 	@Column(length = 100)
 	String shipAddress;
 
-    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    LocalDateTime orderDate;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    LocalDate orderDate;
 
 }
