@@ -13,11 +13,11 @@ import com.example.demo.entity.Order;
 public class Quiz07 {
 
 	@Autowired
-	OrderRepository2 orderRepository;
+	OrderRepository repository;
 
 	@Test
 	public void 주소지가인천인_주문검색() {
-        List<Order> list = orderRepository.get1("인천");
+        List<Order> list = repository.get1("인천");
         for(Order order : list) {
             System.out.println(order);
         }
@@ -26,7 +26,24 @@ public class Quiz07 {
 	@Test
 	public void 주문일이7월3일인_주문검색() {
 		LocalDate localDate = LocalDate.of(2023,7,3);
-		List<Order> list = orderRepository.get2(localDate);
+		List<Order> list = repository.get2(localDate);
+		for(Order order : list) {
+			System.out.println(order);
+		}
+	}
+	
+	@Test
+	public void 주소지가인천인_주문검색_JPQL() {
+        List<Order> list = repository.get3("인천");
+        for(Order order : list) {
+            System.out.println(order);
+        }
+	}
+
+	@Test
+	public void 주문일이7월3일인_주문검색_JPQL() {
+		LocalDate localDate = LocalDate.of(2023,7,3);
+		List<Order> list = repository.get4(localDate);
 		for(Order order : list) {
 			System.out.println(order);
 		}

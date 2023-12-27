@@ -12,11 +12,11 @@ import com.example.demo.entity.Gift;
 public class Quiz06 {
 
 	@Autowired
-	GiftRepository2 giftRepository;
+	GiftRepository repository;
 	
 	@Test
 	public void 가격이5만원이상인_선물검색() {
-		List<Gift> list = giftRepository.get1(50000);
+		List<Gift> list = repository.get1(50000);
 		for(Gift gift : list) {
 			System.out.println(gift);
 		}
@@ -24,7 +24,7 @@ public class Quiz06 {
 	
 	@Test
 	public void 이름이세트로끝나는_선물검색() {
-		List<Gift> list = giftRepository.get2("세트");
+		List<Gift> list = repository.get2("세트");
 		for(Gift gift : list) {
 			System.out.println(gift);
 		}
@@ -32,7 +32,31 @@ public class Quiz06 {
 	
 	@Test
 	public void 가격은4만원이하고_품목은생활용품인_선물검색() {
-		List<Gift> list = giftRepository.get3(40000,"생활용품");
+		List<Gift> list = repository.get3(40000,"생활용품");
+		for(Gift gift : list) {
+			System.out.println(gift);
+		}
+	}
+	
+	@Test
+	public void 가격이5만원이상인_선물검색_JPQL() {
+		List<Gift> list = repository.get4(50000);
+		for(Gift gift : list) {
+			System.out.println(gift);
+		}
+	}
+	
+	@Test
+	public void 이름이세트로끝나는_선물검색_JPQL() {
+		List<Gift> list = repository.get5("세트");
+		for(Gift gift : list) {
+			System.out.println(gift);
+		}
+	}
+	
+	@Test
+	public void 가격은4만원이하고_품목은생활용품인_선물검색_JPQL() {
+		List<Gift> list = repository.get6(40000,"생활용품");
 		for(Gift gift : list) {
 			System.out.println(gift);
 		}
