@@ -19,7 +19,6 @@ import lombok.Setter;
 import lombok.ToString;
 
 @Entity
-@EntityListeners(AuditingEntityListener.class)
 @Table(name="tbl_order")
 @Getter
 @Setter
