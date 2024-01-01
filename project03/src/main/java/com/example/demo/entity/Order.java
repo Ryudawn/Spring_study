@@ -19,7 +19,6 @@ import lombok.Setter;
 import lombok.ToString;
 
 @Entity
-@EntityListeners(AuditingEntityListener.class)
 @Table(name="tbl_order")
 @Getter
 @Setter
@@ -31,13 +30,14 @@ public class Order {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	int orderNo;
 
-	@Column(length = 30)
+	@Column(length = 30, nullable = true)
 	String customerName;
 
-	@Column(length = 100)
+	@Column(length = 100, nullable = true)
 	String shipAddress;
 
     @DateTimeFormat(pattern = "yyyy-MM-dd")
+	@Column(nullable = true)
     LocalDate orderDate;
 
 }

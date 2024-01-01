@@ -15,6 +15,9 @@ public class BoardRepositoryTest {
 	@Autowired
 	BoardRepository boardRepository;
 
+	/*
+	* 테스트 후에 테이블에 데이터가 등록됬는지 확인
+	* */
 	@Test
 	public void 데이터등록() {
 
@@ -25,6 +28,9 @@ public class BoardRepositoryTest {
 		boardRepository.save(board2);
 	}
 
+	/*
+	* 테스트전에 테이블에 데이터가 있는지 확인
+	* */
 	@Test
 	public void 데이터단건조회() {
 		Optional<Board> result = boardRepository.findById(1); // 조회결과를 optional로 반환

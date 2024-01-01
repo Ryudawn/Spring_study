@@ -51,7 +51,9 @@ public class Quiz01 {
 	
 	@Test
 	public void 데이터수정() {
-		Book book = new Book(1,"자바프로그래밍입문_개정판","한빛출판사",50000);
+		Optional<Book> result = bookRepository.findById(1);
+		Book book = result.get();
+		book.setTitle("자바프로그래밍입문_개정판");
 		bookRepository.save(book);	
 	}
 	

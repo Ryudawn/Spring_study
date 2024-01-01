@@ -45,3 +45,6 @@ public class Board {
 	@DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 	LocalDateTime modifiedDate;
 }
+
+
+// 사용자가 입력하는지? 시스템이 입력하는지? 생각해보기!
