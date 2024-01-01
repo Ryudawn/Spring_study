@@ -32,7 +32,7 @@ public class FormServlet extends HttpServlet { // 상속받기
                 "<body>\n" +
                 "<form action=\"/servlet/save\" method=\"post\">\n" +
                 "    이름: <input type=\"text\" name=\"username\" />\n" +
-                "    나이:      <input type=\"text\" name=\"age\" />\n" +
+                "    암호: <input type=\"text\" name=\"password\" />\n" +
                 "    <button type=\"submit\">전송</button>\n" +
                 "</form>\n" +
                 "</body>\n" +
