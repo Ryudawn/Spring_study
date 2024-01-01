@@ -10,11 +10,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class QuizController {
 
     @GetMapping("/q1")
-    public void ex1(){
+    public String ex1(){
+        return "/jsp/quiz1";
     }
     
     @GetMapping("/q2")
-    public void ex2(){
+    public String ex2(){
+        return "/jsp/quiz2";
     }
 
 }

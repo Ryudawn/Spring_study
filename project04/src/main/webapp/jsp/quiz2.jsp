@@ -1,16 +1,9 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-  <style>
-  table, th, td {
-    border: 1px solid black;
-  }
-  table {
-     border-collapse: collapse;
-  }
-  </style>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
 </head>
 <body>
   <table>
