@@ -1,3 +1,5 @@
+<!-- 동적 페이지 만들기 -->
+
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -5,8 +7,6 @@
     <title>Title</title>
 </head>
 <body>
-    <th:block th:each="num : ${arr}">
-        <p th:if="${num%2 == 0}" th:text="${num}"></p>
-    </th:block>
+    <h1>정적인 페이지입니다</h1>
 </body>
 </html>

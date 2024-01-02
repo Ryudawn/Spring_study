@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.example.demo.dto.SampleDTO;
-import org.springframework.web.bind.annotation.RequestParam;
 
 /*
  * 리턴 타입이 void인 경우,url 경로와 일치하는 html 파일을 찾아 반환
@@ -20,6 +19,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 @RequestMapping("/sample")
 public class SampleController {
+	
+    @GetMapping("/ex1")
+    public void ex1(){
+    }
 
     @GetMapping("/ex2")
     public void ex2(Model model){ //Model은 화면에 값을 전달하는 역할

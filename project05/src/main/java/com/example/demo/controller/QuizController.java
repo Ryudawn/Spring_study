@@ -14,27 +14,27 @@ import com.example.demo.dto.PersonDTO;
 @RequestMapping("/quiz")
 public class QuizController {
 
-    @GetMapping("/q3")
-    public void ex3(Model model){
+    @GetMapping("/q1")
+    public void ex1(Model model){
         model.addAttribute("name", "둘리");
         model.addAttribute("age", "20");
         model.addAttribute("address", "인천 구월동");
     }
     
-    @GetMapping("/q4")
-    public void ex4(Model model){
+    @GetMapping("/q2")
+    public void ex2(Model model){
         PersonDTO personDTO = new PersonDTO("둘리",20,"인천 구월동");
         model.addAttribute("dto", personDTO);
     }
     
-    @GetMapping("/q5")
-    public void ex5(Model model){
+    @GetMapping("/q3")
+    public void ex3(Model model){
     	int[] intArr = {1,2,3,4,5};
         model.addAttribute("arr", intArr);
     }
     
-    @GetMapping("/q6")
-    public void ex6(Model model){
+    @GetMapping("/q4")
+    public void ex4(Model model){
         List<PersonDTO> dtoList = new ArrayList<>();
         dtoList.add(new PersonDTO("둘리",20,"인천 구월동"));
         dtoList.add(new PersonDTO("또치",30,"서울 신림동"));
@@ -42,8 +42,8 @@ public class QuizController {
         model.addAttribute("list", dtoList);
     }
 
-    @GetMapping("/q7")
-    public void ex7(Model model){
+    @GetMapping("/q5")
+    public void ex5(Model model){
         List<PersonDTO> dtoList = new ArrayList<>();
         dtoList.add(new PersonDTO("박하나",20,"인천 구월동"));
         dtoList.add(new PersonDTO("홍재범",30,"서울 신림동"));

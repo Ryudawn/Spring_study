@@ -5,8 +5,8 @@
     <title>Title</title>
 </head>
 <body>
-    <th:block th:each="num : ${arr}">
-        <p th:if="${num%2 == 0}" th:text="${num}"></p>
-    </th:block>
+    <h1 th:text="${dto.name}"></h1>
+    <h1 th:text="${dto.age}"></h1>
+    <h1 th:text="${dto.address}"></h1>
 </body>
 </html>
