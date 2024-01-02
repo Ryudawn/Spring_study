@@ -31,7 +31,7 @@ public interface MemoRepository3 extends JpaRepository<Memo, Integer> {
 	
 	/* 순수한 쿼리 사용하기 */
 	//메모의 번호를 기준으로 역정렬
-	//select * from tbl_memo orderby no desc
+	//select * from tbl_memo order by no desc
 	@Query(value = "select * from tbl_memo order by no desc", nativeQuery = true)
 	List<Memo> get4();
 	

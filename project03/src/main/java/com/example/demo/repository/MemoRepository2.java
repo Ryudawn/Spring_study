@@ -26,7 +26,7 @@ public interface MemoRepository2 extends JpaRepository<Memo, Integer> {
 	List<Memo> findByTextIsNotNull();
 		
 	//메모의 번호를 기준으로 역정렬
-	//select * from tbl_memo orderby no desc
+	//select * from tbl_memo order by no desc
 	List<Memo> findAllByOrderByNoDesc();
 	
 	//메모의 번호가 3보다 작은 데이터 삭제
