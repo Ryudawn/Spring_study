@@ -11,7 +11,9 @@ import com.example.demo.entity.Gift;
 public interface GiftRepository extends JpaRepository<Gift, Integer> {
 	
 	// 순수SQL
-	@Query(value = "select * from tbl_gift m where price >= :price", nativeQuery = true)
+	//가격이 ‘50000원’이상인 선물을 검색
+	//select * from tbl_gift where price >= 50000;
+	@Query(value = "select * from tbl_gift where price >= :price", nativeQuery = true)
 	List<Gift> get1(@Param("price") int price);
 
 	@Query(value = "select * from tbl_gift where name like %:name", nativeQuery = true)
