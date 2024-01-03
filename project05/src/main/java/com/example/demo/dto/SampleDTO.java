@@ -16,6 +16,7 @@ import java.time.LocalDateTime;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class SampleDTO {
 
     int no; //글번호

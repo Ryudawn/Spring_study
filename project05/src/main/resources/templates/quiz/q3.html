@@ -5,8 +5,8 @@
     <title>Title</title>
 </head>
 <body>
-    <th:block th:each="num : ${arr}">
-        <p th:if="${num%2 == 0}" th:text="${num}"></p>
-    </th:block>
+    <p> 이름: <span th:text="${dto.name}"></span> </p>
+    <p> 나이: <span th:text="${dto.age}"></span> </p>
+    <p> 주소: <span th:text="${dto.address}"></span> </p>
 </body>
 </html>

@@ -15,6 +15,7 @@ import java.time.LocalDateTime;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class PersonDTO {
 
     private String name;
