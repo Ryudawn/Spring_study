@@ -17,10 +17,10 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 public class SampleDTO {
 
-    private int no; //글번호
+    int no; //글번호
 
-    private String text; //글내용
+    String text; //글내용
     
-    private LocalDateTime regDate; //등록일
+    LocalDateTime regDate; //등록일
 
 }
