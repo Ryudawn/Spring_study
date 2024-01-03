@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -27,45 +28,36 @@ public class SampleController {
 	}
 
 	@GetMapping("/ex3")
-	public void ex3(Model model, String param) { // 파라미터 수집
-		model.addAttribute("msg", param); // 화면에 파라미터 전달
+	public void ex3(Model model) {
+		model.addAttribute("msg1", "안녕하세요");
+		model.addAttribute("msg2", "반가워요");
+		// model 객체에 데이터를 여러번 담을 수 있음
 	}
 
 	@GetMapping("/ex4")
 	public void ex4(Model model) {
-		model.addAttribute("msg", "hello");
-	}
-
-	@GetMapping("/ex5")
-	public void ex5(Model model) {
-		SampleDTO sampleDTO = new SampleDTO(1, "aaa", LocalDateTime.now());
+		SampleDTO sampleDTO = new SampleDTO(1, "hello", LocalDate.now());
 		model.addAttribute("dto", sampleDTO); // 화면에 객체 전달
+	}
 
+	@GetMapping({"/ex5", "/ex6", "/ex7", "/ex8"})
+	public void ex5(Model model) {
 		List<SampleDTO> list = new ArrayList<>();
-		list.add(new SampleDTO(1, "aaa", LocalDateTime.now()));
-		list.add(new SampleDTO(2, "bbb", LocalDateTime.now()));
-		list.add(new SampleDTO(3, "ccc", LocalDateTime.now()));
+		list.add(new SampleDTO(1, "aaa", LocalDate.now()));
+		list.add(new SampleDTO(2, "bbb", LocalDate.now()));
+		list.add(new SampleDTO(3, "ccc", LocalDate.now()));
 		model.addAttribute("list", list); // 화면에 리스트 전달
 	}
 
-	@GetMapping("/ex6")
-	public void ex6(Model model) {
-		List<SampleDTO> list = new ArrayList<>();
-		list.add(new SampleDTO(1, "aaa", LocalDateTime.now()));
-		list.add(new SampleDTO(2, "bbb", LocalDateTime.now()));
-		list.add(new SampleDTO(3, "ccc", LocalDateTime.now()));
-		model.addAttribute("list", list); // 화면에 리스트 전달
-	}
-
-	@GetMapping("/ex7")
-	public void ex7(Model model) {
-		SampleDTO sampleDTO = new SampleDTO(1, "aaa", LocalDateTime.now());
+	@GetMapping("/ex9")
+	public void ex9(Model model) {
+		SampleDTO sampleDTO = new SampleDTO(1, "aaa", LocalDate.now());
 		model.addAttribute("result", "success"); // 화면에 문자열 전달
 		model.addAttribute("dto", sampleDTO); // 화면에 객체 전달
 	}
 
-	@GetMapping("/ex8")
-	public void ex8(Model model) {
+	@GetMapping("/ex10")
+	public void ex10(Model model) {
 		model.addAttribute("date", LocalDateTime.now()); // 화면에 현재시간 전달
 	}
 

@@ -24,9 +24,7 @@
     <h1>HEADER</h1>
 </div>
 <div class="content" >
-	<h1>CONTENT</h1>
-    <!-- 필요한 조각 가져오기 -->
-<!--    <th:block th:replace = "~{sample/fragment :: frag1}"></th:block>-->
+    <th:block th:replace = "~{layout/fragment :: frag2}"></th:block>
 </div>
 <div class="footer">
     <h1>FOOTER</h1>
@@ -34,3 +32,5 @@
 
 </body>
 </html>
+
+<!-- 이방식을 사용하면 공통영역이 중복된다. 만약 공통영역이 변경된다면 2페이지를 모두 수정해야 한다 -->

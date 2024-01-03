@@ -1,16 +1,18 @@
-<!-- 링크 표현식 -->
+<!-- 컨트롤러에서 전달받은 객체 출력하기 -->
 
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+
 <body>
-    <h1>URL 링크</h1>
-    <ul>
-        <li><a th:href="@{/sample/ex3(param=aaa)}">3번째 페이지로 이동하기</a></li> <!-- () 부분이 쿼리 파라미터로 처리됨 -->
-        <li><a th:href="@{/sample/ex3(param=${msg})}">3번째 페이지로 이동하기</a></li> <!-- 변수를 파라미터로 사용 -->
-    </ul>
+    <h1>Object</h1>
+
+    <p>글번호 : [[${dto.no}]]</p>
+    <p>글내용 : [[${dto.text}]]</p>
+    <p>등록일 : [[${dto.regDate}]]</p>
 </body>
+
 </html>
