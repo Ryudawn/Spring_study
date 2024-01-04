@@ -18,10 +18,10 @@ import java.time.LocalDateTime;
 @Builder
 public class PersonDTO {
 
-    private String name;
+    String name; // 이름
     
-    private int age;
+    int age; // 나이
     
-    private String address;
+    String address; // 주소
 
 }
