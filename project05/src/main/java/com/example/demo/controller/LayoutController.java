@@ -8,29 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/layout")
 public class LayoutController {
 
-	// 템플릿 레이아웃1
-	@GetMapping("/exLayout1")
-	public void ex1() { // 레이아웃을 반환
-	}
-
-	// 템플릿 레이아웃1
-	@GetMapping("/exLayout1-2")
-	public void ex2() {
-	}
-
-	// 템플릿 레이아웃2
-	@GetMapping("/fragment2")
-	public void ex3() { // 조각페이지를 반환
-	}
-
-	// 템플릿 레이아웃2
-	@GetMapping("/fragment3")
-	public void ex4() {
-	}
-
-	// 부트스트랩
-	@GetMapping("/exSidebar")
-	public void ex5() {
+	@GetMapping({"/exLayout1","/exLayout1-2" , "/fragment2", "/fragment3", "/basic", "/exSidebar"})
+	public void ex1() {
 	}
 
 }

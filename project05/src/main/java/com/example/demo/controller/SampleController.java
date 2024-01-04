@@ -61,29 +61,4 @@ public class SampleController {
 		model.addAttribute("date", LocalDateTime.now()); // 화면에 현재시간 전달
 	}
 
-	// 템플릿 레이아웃1
-	@GetMapping("/exLayout1")
-	public void ex7() { // 레이아웃을 반환
-	}
-
-	// 템플릿 레이아웃1
-	@GetMapping("/exLayout1-2")
-	public void ex8() {
-	}
-
-	// 템플릿 레이아웃2
-	@GetMapping("/fragment2")
-	public void ex9() { // 조각페이지를 반환
-	}
-
-	// 템플릿 레이아웃2
-	@GetMapping("/fragment3")
-	public void ex10() {
-	}
-
-	// 부트스트랩
-	@GetMapping("/fragment4")
-	public void ex11() {
-	}
-
 }
