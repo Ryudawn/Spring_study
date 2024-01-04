@@ -3,7 +3,8 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
-<th:block th:fragment="setContent(content)"> <!-- content라는 파라미터를 받기 -->
+<!-- setContent함수를 통해 content라는 파라미터 받기 -->
+<th:block th:fragment="setContent(content)"> <!-- 위쪽과 아래쪽에 블록태그 처리 -->
 
 <style>
     .header {
@@ -26,7 +27,7 @@
     <h1>HEADER</h1>
 </div>
 <div class="content" >
-    <th:block th:replace = "${content}"> <!-- 파라미터 출력 -->
+    <th:block th:replace = "${content}"> <!-- 파라미터로 전달된 content 출력 -->
     </th:block>
 </div>
 <div class="footer">
