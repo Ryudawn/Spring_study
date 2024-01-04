@@ -29,7 +29,7 @@ public class LayoutController {
 	}
 
 	// 부트스트랩
-	@GetMapping("/fragment4")
+	@GetMapping("/exSidebar")
 	public void ex5() {
 	}
 
