@@ -1,12 +1,11 @@
 <!-- 템플릿 레이아웃 -->
 
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <style>
     .header {
         height: 20vh;
-        background-color: aqua;  /* pink로 변경 */
+        background-color: aqua;
     }
     .content {
         height: 30vh;
@@ -24,12 +23,12 @@
     <h1>HEADER</h1>
 </div>
 <div class="content" >
-    <!-- 필요한 조각 가져오기 -->
-    <th:block th:replace = "~{layout/fragment :: frag1}"></th:block>
+    <h1>CONTENT</h1>
 </div>
 <div class="footer">
     <h1>FOOTER</h1>
 </div>
 
 </body>
+
 </html>
