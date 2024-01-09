@@ -28,7 +28,7 @@ public class SampleController1 {
 	public void ex1() {
 		// template/ + /return + /ex1.html 파일을 자동으로 반환 
 	}
-	
+
 	@GetMapping("/ex2")
 	public String ex2() {
 		return "/return/ex1.html"; //html경로를 지정하여 반환

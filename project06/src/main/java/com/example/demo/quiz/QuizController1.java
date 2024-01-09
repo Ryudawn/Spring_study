@@ -59,7 +59,7 @@ public class QuizController1 {
 	}
 	
 	/*
-	 * localhost:8080/return/q5 주소로 요청이 들어오면 자동차 목록을 반환하세요.
+	 * localhost:8080/return/q5 주소로 요청이 들어오면 학생 목록을 반환하세요.
 	 * */
 	@ResponseBody
 	@GetMapping("/q5")
