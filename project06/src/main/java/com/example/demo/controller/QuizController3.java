@@ -5,10 +5,7 @@ import com.example.demo.dto.StudentDTO;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -22,7 +19,7 @@ public class QuizController3 {
 	 * 문자열 파라미터를 수집하세요.
 	 */
 	@GetMapping("/q1")
-	public ResponseEntity quiz1(String str) {
+	public ResponseEntity quiz1(@RequestParam(name = "str") String str) {
 		System.out.println("String타입 파라미터 수집: " + str);
 		return new ResponseEntity(HttpStatus.OK);
 	}
@@ -32,7 +29,7 @@ public class QuizController3 {
 	 * 실수 파라미터와 논리형 파라미터를 수집하세요.
 	 */
 	@GetMapping("/q2")
-	public ResponseEntity quiz2(float f, boolean b) {
+	public ResponseEntity quiz2(@RequestParam(name = "f") float f, @RequestParam(name = "b") boolean b) {
 		System.out.println("float타입 파라미터 수집: " + f + ", boolean타입 파라미터 수집: " + b);
 		return new ResponseEntity(HttpStatus.OK);
 	}
@@ -43,7 +40,7 @@ public class QuizController3 {
 	 * 그리고 콘솔창에 배열의 요소를 하나씩 출력하고, 배열의 개수를 출력하세요.
 	 */
 	@GetMapping("/q3")
-	public ResponseEntity quiz3(char[] arr) {
+	public ResponseEntity quiz3(@RequestParam(name = "arr") char[] arr) {
 		System.out.println("char형 배열 수집: " + Arrays.toString(arr)); //배열 -> 문자열로 변환
 		for(int i=0;i<arr.length;i++) {
 			System.out.println(arr[i]);
