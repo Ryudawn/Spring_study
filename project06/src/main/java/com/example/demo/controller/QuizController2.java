@@ -1,21 +1,9 @@
-package com.example.demo.quiz;
-
-import java.util.ArrayList;
-import java.util.List;
+package com.example.demo.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-
-import com.example.demo.dto.BookDTO;
-import com.example.demo.dto.CarDTO;
-import com.example.demo.dto.StudentDTO;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequestMapping("/method")

@@ -1,9 +1,7 @@
-package com.example.demo.quiz;
+package com.example.demo.controller;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
+import com.example.demo.dto.CarDTO;
+import com.example.demo.dto.StudentDTO;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -12,9 +10,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.example.demo.dto.BookDTO;
-import com.example.demo.dto.CarDTO;
-import com.example.demo.dto.StudentDTO;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 @Controller
 @RequestMapping("/param")
