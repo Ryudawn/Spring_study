@@ -24,7 +24,7 @@ import com.example.demo.dto.BookDTO;
 public class SampleController3 {
 
 	@GetMapping("/ex1")
-	public ResponseEntity ex1(@RequestParam int i) { //단순타입은 어노테이션 생략 가능
+	public ResponseEntity ex1(@RequestParam(name = "i") int i) {
 		System.out.println("int형 파라미터 수집: " + i);
 		return new ResponseEntity(HttpStatus.OK); 
 		//파라미터 전송
@@ -32,7 +32,7 @@ public class SampleController3 {
 	}
 	
 	@GetMapping("/ex2")
-	public ResponseEntity ex2(int i, char c) {
+	public ResponseEntity ex2(@RequestParam(name = "i") int i, @RequestParam(name = "c") char c) {
 		System.out.println("int형 파라미터 수집: " + i + ", char형 파라미터 수집: " + c);
 		return new ResponseEntity(HttpStatus.OK); 		
 		//추가 파라미터는 &로 구분하기
@@ -40,14 +40,14 @@ public class SampleController3 {
 	}
 
 	@GetMapping("/ex3")
-	public ResponseEntity ex3(int[] arr) { //arr 이라는 이름의 파라미터가 여러개 전달되더라도 배열로 수집됨
+	public ResponseEntity ex3(@RequestParam(name = "arr") int[] arr) { //arr 이라는 이름의 파라미터가 여러개 전달되더라도 배열로 수집됨
 		System.out.println("int형 배열 수집: " + Arrays.toString(arr)); //배열 -> 문자열로 변환
 		return new ResponseEntity(HttpStatus.OK);
 		//localhost:8080/param/ex3?arr=1&arr=2&arr=3
 	}
 
 	@GetMapping("/ex4")
-	public ResponseEntity ex4(@RequestParam ArrayList<Integer> list) { //list 이라는 이름의 파라미터가 여러개 전달되더라도 리스트로 수집됨
+	public ResponseEntity ex4(@RequestParam(name = "list") ArrayList<Integer> list) { //list 이라는 이름의 파라미터가 여러개 전달되더라도 리스트로 수집됨
 		System.out.println("int형 리스트 수집: " + list);
 		return new ResponseEntity(HttpStatus.OK);
 		//localhost:8080/param/ex4?list=1&list=2&list=3
@@ -60,14 +60,14 @@ public class SampleController3 {
 	 * "yyyy/MM/dd" or "yyyyMMdd" 등 사용 가능
 	 * */
 	@GetMapping("/ex5")
-	public ResponseEntity ex5(@DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate date) {
+	public ResponseEntity ex5(@RequestParam(name = "date") @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate date) {
 		System.out.println("날짜 수집: " + date);
 		return new ResponseEntity<>(HttpStatus.OK);
 		//localhost:8080/param/ex5?date=2023-07-20
 	}
 
 	@GetMapping("/ex6/{i}")
-	public ResponseEntity ex6(@PathVariable int i) {
+	public ResponseEntity ex6(@PathVariable(name = "i") int i) {
 		System.out.println("int형 파라미터 수집: " + i);
 		return new ResponseEntity(HttpStatus.OK); 
 		//localhost:8080/param/ex6/100
