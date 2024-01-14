@@ -12,18 +12,25 @@ import com.example.demo.dto.BoardDTO;
 import com.example.demo.entity.Board;
 import com.example.demo.repository.BoardRepository;
 
-@Service // 비즈니스 로직을 처리하는 역할을 명시
+@Service // 서비스 클래스로 지정
 public class BoardServiceImpl implements BoardService {
 
 	@Autowired
 	private BoardRepository repository; // 사용할 리파지토리를 멤버로 선언
 
+	// 상속받은 메소드 구현하기
 	@Override
 	public int register(BoardDTO dto) {
-		Board entity = dtoToEntity(dto); // 컨트롤러에서 전달받은 dto를 엔티티로 변환
-		repository.save(entity); // 리파티토리에 엔티티를 전달하여 저장
 
-		return entity.getNo(); // 새로 등록된 게시물의 번호를 반환
+		System.out.println(dto);
+
+		Board entity = dtoToEntity(dto); // 파라미터로 전달받은 dto를 엔티티로 변환
+		repository.save(entity); // 리파지토리로 게시물 등록
+		int newNo = entity.getNo();
+
+		System.out.println(entity);
+
+		return newNo; // 새로운 게시물의 번호 반환
 	}
 
 	@Override
