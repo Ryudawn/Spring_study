@@ -20,16 +20,14 @@ public class BoardController {
 	@Autowired
 	private BoardService service;
 
-	// 메인화면
-	@GetMapping("/main")
-	public void main() {
-	}
-
 	// 목록화면
-	@GetMapping("/list")
-	public void list(Model model) {
-		List<BoardDTO> list = service.getList(); // 서비스로 게시물 목록 가져오기
-		model.addAttribute("list", list); // 화면에 게시물 목록 전달
+	@GetMapping({"/", "/list"})
+	public String list (Model model) {
+
+//		List<BoardDTO> list = service.getList(); // 서비스로 게시물 목록 가져오기
+//		model.addAttribute("list", list); // 화면에 게시물 목록 전달
+
+		return "board/list";
 	}
 
 	// 등록화면
