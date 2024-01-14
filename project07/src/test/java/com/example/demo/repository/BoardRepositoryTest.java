@@ -17,7 +17,7 @@ public class BoardRepositoryTest {
 	BoardRepository repository;
 	
 	@Test
-	public void 게시물등록() {
+	void 게시물등록() {
 		Board board = Board.builder()
 						.title("1번글").content("내용입니다").writer("둘리")
 						.build();
@@ -25,7 +25,7 @@ public class BoardRepositoryTest {
 	}
 
 	@Test
-	public void 게시물목록조회() {
+	void 게시물목록조회() {
 		List<Board> list = repository.findAll();
 		for(Board board : list) {
 			System.out.println(board);
@@ -33,7 +33,7 @@ public class BoardRepositoryTest {
 	}
 	
 	@Test
-	public void 게시물단건조회() {
+	void 게시물단건조회() {
 		Optional<Board> result = repository.findById(1);
 		if(result.isPresent()) {
 			Board board = result.get();
@@ -42,7 +42,7 @@ public class BoardRepositoryTest {
 	}
 
 	@Test
-	public void 게시물수정() {
+	void 게시물수정() {
 		Optional<Board> result = repository.findById(1);
 		Board board = result.get();
 		board.setContent("내용이수정되었습니다~");
@@ -50,7 +50,7 @@ public class BoardRepositoryTest {
 	}
 	
 	@Test
-	public void 게시물삭제() {
+	void 게시물삭제() {
 		repository.deleteById(1);
 	}
 
