@@ -17,10 +17,11 @@ import java.time.LocalDateTime;
 @Builder
 public class BoardDTO {
 
-    private int no;
-    private String title;
-    private String content;
-    private String writer;
-    private LocalDateTime regDate;
-    private LocalDateTime modDate;
+    int no;
+    String title;
+    String content;
+    String writer;
+    LocalDateTime regDate;
+    LocalDateTime modDate;
 }
+

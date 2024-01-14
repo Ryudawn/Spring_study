@@ -15,10 +15,10 @@ import java.time.LocalDateTime;
 @Getter
 abstract class BaseEntity {
 
-    @CreatedDate //인스턴스가 생성되는 것을 감지하여 일자를 저장
+    @CreatedDate //인스턴스가 생성되는 것을 감지하여 현재시간을 저장
     LocalDateTime regDate;
 
-    @LastModifiedDate //인스턴스가 수정되는 것을 감지하여 일자를 저장
+    @LastModifiedDate //인스턴스가 수정되는 것을 감지하여 현재시간을 저장
     LocalDateTime modDate;
 
 }

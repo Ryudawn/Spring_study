@@ -3,15 +3,14 @@ package com.example.demo.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
-
 @Entity
 @Getter
 @Setter
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder //생성자와 같이 객체를 생성하는 메소드를 추가. 생성자와 달리 필요한 값만 입력할 수 있음
-public class Board extends BaseEntity {
+@Builder
+public class Board extends BaseEntity { // 등록일, 수정일 필드 상속받기
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

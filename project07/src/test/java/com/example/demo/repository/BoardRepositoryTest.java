@@ -18,7 +18,9 @@ public class BoardRepositoryTest {
 	
 	@Test
 	public void 게시물등록() {
-		Board board = new Board(0,"1번글","내용입니다","둘리");
+		Board board = Board.builder()
+						.title("1번글").content("내용입니다").writer("둘리")
+						.build();
 		repository.save(board);
 	}
 
