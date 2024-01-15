@@ -39,9 +39,17 @@ public class BoardController {
 
     // 등록처리
     @PostMapping("/register")
+    // RedirectAttributes은 모델처럼 화면에 데이터를 전달하는 객체
+    // 화면에서 전달한 데이터를 파라미터로 수집
     public String registerPost(BoardDTO dto, RedirectAttributes redirectAttributes) {
-        int no = service.register(dto); // 새로 추가된 엔티티의 번호
+
+        // 게시물 등록하고 새로운 게시물 번호 반환
+        int no = service.register(dto);
+        
+        // 목록화면에 새로운 게시물 번호 전달
         redirectAttributes.addFlashAttribute("msg", no);
+        
+        // 목록화면으로 이동. HTML경로아님. url주소를 작성할것
         return "redirect:/board/list";
     }
 
