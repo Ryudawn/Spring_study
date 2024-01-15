@@ -14,7 +14,7 @@
             </span>
 		</h1>
 
-		<table class="table table-striped">  <!-- 부트스트랩의 스타일 적용 -->
+		<table class="table table-striped">
 			<thead>
 				<tr>
 					<th>#</th>
@@ -39,15 +39,16 @@
 			</tbody>
 		</table>
 
-		<script th:inline="javascript">
-			$(document).ready(function(){
-			  // 실행할 기능을 정의
-			  var msg = [[${msg}]]
-			  if(msg != null){
-				  alert(msg + "번 글이 등록되었습니다.");
-			  }
-			});
-		</script>
+		<!--
+        <script th:inline="javascript">
+                    $(document).ready(function(){
+                      var msg = [[${msg}]];
+                      if(msg != null){
+                          alert(msg + "번 글이 등록되었습니다.");
+                      }
+                    });
+        </script>
+        -->
 
 	</th:block>
 
