@@ -16,7 +16,7 @@ import com.example.demo.repository.BoardRepository;
 public class BoardServiceImpl implements BoardService {
 
 	@Autowired
-	private BoardRepository repository; // 사용할 리파지토리를 멤버로 선언
+	BoardRepository repository; // 사용할 리파지토리를 멤버로 선언
 
 	// 상속받은 메소드 구현하기
 	@Override

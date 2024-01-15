@@ -5,7 +5,7 @@
 
 	<th:block th:fragment="content">
 
-		<!-- 링크 처리 -->
+		<!-- 버튼을 클릭하면 등록화면으로 이동 -->
 		<h1>Board List Page
 		 	<span>
                 <a th:href="@{/board/register}">
@@ -17,18 +17,19 @@
 		<table class="table table-striped">  <!-- 부트스트랩의 스타일 적용 -->
 			<thead>
 				<tr>
-					<th scope="col">#</th>
-					<th scope="col">제목</th>
-					<th scope="col">작성자</th>
-					<th scope="col">등록일</th>
+					<th>#</th>
+					<th>제목</th>
+					<th>작성자</th>
+					<th>등록일</th>
 				</tr>
 			</thead>
 
 			<!-- 테이블에 타임리프 처리 -->
 			<tbody>
 				<tr th:each="dto : ${list}"> <!-- 게시물 리스트를 하나씩 꺼내서 처리하기 -->
-					<th scope="row">
-						<a th:href="@{/board/read(no = ${dto.no})}">[[${dto.no}]]</a> <!-- 상세화면 링크 처리 -->
+					<!-- 링크를 클릭하면 상세화면으로 이동 -->
+					<th>
+						<a th:href="@{/board/read(no = ${dto.no})}">[[${dto.no}]]</a> <!-- (no = ${dto.no}) 부분은 /board/read?no=1 으로 처리됨 -->
 					</th>
 					<td>[[${dto.title}]]</td>
 					<td>[[${dto.writer}]]</td>
